@@ -11,6 +11,8 @@ import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { routing } from "./app.routing";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +23,15 @@ import { routing } from "./app.routing";
     ContactComponent,
     HeaderComponent,
     FooterComponent,
+    SliderComponent,
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    NgbModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
