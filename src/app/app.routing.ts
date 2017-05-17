@@ -4,6 +4,7 @@ import { AboutComponent } from "./about/about.component";
 import { BlogComponent } from "./blog/blog.component";
 import { ContactComponent } from "./contact/contact.component";
 import { ModuleWithProviders } from "@angular/core";
+import { GalleryComponent } from "app/gallery/gallery.component";
 
 
 const routes: Routes = [
@@ -18,6 +19,10 @@ const routes: Routes = [
     {
         path: 'blog',//localhost:3000
         component: BlogComponent
+    },
+     {
+        path: 'gallery',//localhost:3000
+        component: GalleryComponent
     },
     {
         path: 'contact',//localhost:3000

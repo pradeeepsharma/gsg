@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { routing } from "./app.routing";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SliderComponent } from './slider/slider.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SliderComponent } from './slider/slider.component';
     HeaderComponent,
     FooterComponent,
     SliderComponent,
+    GalleryComponent,
     
   ],
   imports: [
