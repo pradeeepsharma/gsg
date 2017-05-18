@@ -6,10 +6,12 @@
 
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+     background-color:#20B2AA;
 }
 
 .thumb {
     margin-bottom: 30px;
+     background-color:#20B2AA;
 }
 
 footer {
