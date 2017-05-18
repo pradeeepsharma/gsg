@@ -14,7 +14,7 @@ import { routing } from "./app.routing";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SliderComponent } from './slider/slider.component';
 import { GalleryComponent } from './gallery/gallery.component';
-
+import { AgmCoreModule } from 'angular2-google-maps/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +34,9 @@ import { GalleryComponent } from './gallery/gallery.component';
     HttpModule,
     routing,
     NgbModule.forRoot(),
+     AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBauIlf4Qg_k0LsbWlyLPa1gNVp57YBkD0'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
