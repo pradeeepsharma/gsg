@@ -15,6 +15,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SliderComponent } from './slider/slider.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
+import {LocationStrategy, 
+       HashLocationStrategy,
+       PathLocationStrategy //HTML 5,default
+      } 
+                        from "@angular/common";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +44,13 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
       apiKey: 'AIzaSyBauIlf4Qg_k0LsbWlyLPa1gNVp57YBkD0'
     })
   ],
-  providers: [],
+  providers: [
+
+     {
+      provide : LocationStrategy,
+      useClass: HashLocationStrategy //HashLocationStrategy
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
