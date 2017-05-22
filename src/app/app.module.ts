@@ -15,7 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SliderComponent } from './slider/slider.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
-import {AngularFireModule} from 'angulafire2';
+import {AngularFireModule} from 'angularfire2';
 import {LocationStrategy, 
        HashLocationStrategy,
        PathLocationStrategy //HTML 5,default
