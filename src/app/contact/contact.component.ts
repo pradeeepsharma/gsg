@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from "app/contact/user.service";
 
 @Component({
   selector: 'app-contact',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ContactComponent implements OnInit {
  lat: number = 29.1304046;
   lng: number = 75.7173577;
-  constructor() { }
+  constructor(private userService:UserService) { }
 
   ngOnInit() {
   }

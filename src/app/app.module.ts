@@ -15,11 +15,21 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SliderComponent } from './slider/slider.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
+import {AngularFireModule} from 'angularfire2';
 import {LocationStrategy, 
        HashLocationStrategy,
        PathLocationStrategy //HTML 5,default
       } 
                         from "@angular/common";
+import { UserService } from "app/contact/user.service";
+
+export const firebaseConfig = {
+  apiKey: 'efe863f2-89ea-495e-b0df-357f3701005e',
+  authDomain: '<your-project-authdomain>',
+  databaseURL: '<your-database-URL>',
+  storageBucket: '<your-storage-bucket>',
+  messagingSenderId: '<your-messaging-sender-id>'
+};
 
 @NgModule({
   declarations: [
@@ -42,14 +52,16 @@ import {LocationStrategy,
     NgbModule.forRoot(),
      AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBauIlf4Qg_k0LsbWlyLPa1gNVp57YBkD0'
-    })
+    }),
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [
 
      {
       provide : LocationStrategy,
       useClass: HashLocationStrategy //HashLocationStrategy
-    }
+    },
+    UserService
   ],
   bootstrap: [AppComponent]
 })
